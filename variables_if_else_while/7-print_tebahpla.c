@@ -11,6 +11,7 @@ int main(void)
 
 	for( ; inverse >= 'a'; inverse--)
 		putchar(inverse);
+	putchar('\n');
 
 	return (0);
 }
