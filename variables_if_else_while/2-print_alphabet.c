@@ -8,9 +8,9 @@
 int main(void)
 {
 	char list = 'a';
-	for(int i = 0; list[i] != z; i++ )
+	for(; list != 'z'; list++ )
 		putchar (list);
-	putchat (list);
+	putchat ('\n');
 
 	return (0);
 }
