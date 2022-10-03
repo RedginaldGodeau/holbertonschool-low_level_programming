@@ -10,9 +10,8 @@ int main(void)
 	int i;
 
 	for (i = 0 ; i < 16 ; i++)
-	{
-		
-		if (i > 9) 
+	{	
+		if (i > 9)
 			putchar(i - 10 + 'a');
 		else
 			putchar(i + '0');
