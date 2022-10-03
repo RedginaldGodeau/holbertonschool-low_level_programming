@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include <stdio.h>
 
 /**
 * main - Entry point
@@ -10,7 +10,7 @@ int main(void)
 	char list = 'a';
 	for(; list != 'z'; list++ )
 		putchar (list);
-	putchat ('\n');
+	putchar ('\n');
 
 	return (0);
 }
