@@ -7,11 +7,12 @@
 */
 int main(void)
 {
-	char list = 'a';	
-	for ( ; list < 'z' + 1; list++)
+	char list = 'a';
+	for (; list < 'z' + 1; list++)
 	{
-		if (list != 'q' || list != 'e')
+		if (list != 'q' && list != 'e')
 			putchar (list);
+
 	}
 	putchar ('\n');
 
