@@ -7,7 +7,8 @@
 */
 int main(void)
 {
-	char list = 'a';	
+	char list = 'a';
+
 	for ( ; list < 'z' + 1; list++)
 		putchar (list);
 	putchar ('\n');
