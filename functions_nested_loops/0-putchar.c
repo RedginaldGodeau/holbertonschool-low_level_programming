@@ -9,6 +9,7 @@ int main(void)
 {
 	char put[] = "_putchar";
 	int i = 0;
+
 	for ( ; put[i] != '\0'; i++)
 		_putchar (put[i]);
 
