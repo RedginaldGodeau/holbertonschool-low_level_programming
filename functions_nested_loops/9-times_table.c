@@ -10,9 +10,9 @@ void times_table(void)
                         int num = i * i2;
                         int unit = num % 10;
                         int dix = (num - unit) / 10;
-
-                        _putchar('0' + dix);
-                        _putchar('0' + unit);
+			
+                        if(dix != 0) _putchar('0' + dix);
+			_putchar('0' + unit);
                         if(i2 != 9)
                         {
                        	 _putchar(',');
