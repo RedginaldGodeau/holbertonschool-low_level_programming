@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+* times_table - Entry point...
+* Description: 'the program desc'
+* Return: Always 0 (Success)
+* @c: int parmameter
+*/
+
 void times_table(void)
 {
 	int i, i2;

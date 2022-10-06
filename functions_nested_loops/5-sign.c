@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+* print_sign - Entry point...
+* Description: 'the program desc'
+* Return: Always 0 (Success)
+* @n: int parmameter
+*/
+
 int print_sign(int n)
 {
 	if (n > 0)
