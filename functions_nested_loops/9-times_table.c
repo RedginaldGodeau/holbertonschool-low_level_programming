@@ -21,7 +21,9 @@ void times_table(void)
 			dix = (dix == 0 ? ' ' : dix + '0');
 
 			if (i2 != 0)
-				_putchar('0' + un);
+				_putchar('0' + dix);
+
+			_putchar('0' + un);
 
 			if (i2 != 9)
 			{
