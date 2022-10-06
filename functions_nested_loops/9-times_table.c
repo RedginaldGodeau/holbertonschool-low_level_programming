@@ -16,7 +16,7 @@ void times_table(void)
 		{
 			int num = i * i2;
 			int un = num % 10;
-			int dix = dix - un;
+			int dix = num - un;
 
 			dix = (dix == 0 ? ' ' : dix);
 
