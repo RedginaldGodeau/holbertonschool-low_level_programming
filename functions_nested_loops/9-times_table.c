@@ -1,0 +1,26 @@
+#include "main.h"
+
+void times_table(void)
+{
+	int i,i2;
+        for (i = 0; i <= 9; i++)
+        {
+                for(i2 = 0; i2 <= 9; i2++)
+                {
+                        int num = i * i2;
+                        int unit = num % 10;
+                        int dix = (num - unit) / 10;
+
+                        _putchar('0' + dix);
+                        _putchar('0' + unit);
+                        if(i2 != 9)
+                        {
+                       	 _putchar(',');
+                       	 _putchar(' ');
+                        }
+
+                }
+            _putchar('\n');
+          }
+}
+
