@@ -18,7 +18,7 @@ void times_table(void)
 			int un = num % 10;
 			int dix = dix - un;
 
-			dix = (dix == 0 ? ' ' : dix + '0');
+			dix = (dix == 0 ? ' ' : dix);
 
 			if (i2 != 0)
 				_putchar('0' + dix);
