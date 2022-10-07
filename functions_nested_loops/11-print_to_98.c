@@ -2,19 +2,18 @@
 #include <stdio.h>
 
 /**
-* add - Entry point...
+* print_to_98 - Entry point...
 * Description: 'the program desc'
 * Return: Always 0 (Success)
-* @a: int parmameter
-* @b: int parmameter
+* @n: int parmameter
 */
 
 void print_to_98(int n)
 {
 	int op = 98 - n;
-	op /= op;
-
 	int i = n;
+
+	op = (op < 0 ? -1 : 1);
 
 	for (; i != 98; i += op)
 	{
