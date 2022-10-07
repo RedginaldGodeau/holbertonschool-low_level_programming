@@ -4,6 +4,6 @@ OBJ= $(SRC:.c=.o)
 NAME=school
 
 all:
-	${CC} -c -o ${OBJ} ${SRC}
+	${CC} -c ${SRC}
 	${CC} ${OBJ} -o ${NAME}
 
