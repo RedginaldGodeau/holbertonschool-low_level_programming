@@ -15,18 +15,15 @@ void print_to_98(int n)
 
 	op = (op < 0 ? -1 : 1);
 
-	for (; ; i += op)
+	for (; i != 98 + op  ; i += op)
 	{
-		if (i != n)
+		if (i != n) 
 			printf(", ");
 
 		printf("%d", i);
 
 		if (i == 98)
-		{
 			_putchar('\n');
-			break;
-		}
 	}
 
 }
