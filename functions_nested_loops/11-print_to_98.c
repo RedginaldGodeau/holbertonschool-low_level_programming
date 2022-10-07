@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
 * add - Entry point...
@@ -8,7 +9,16 @@
 * @b: int parmameter
 */
 
-int add(int a, int b)
+void print_to_98(int n)
 {
-	return (a + b);
+	int op = 98 - n;
+	op /= op;
+
+	int i = n;
+
+	for (; i != 98; i += op)
+	{
+		printf(" ,%d", i);
+	}
+
 }

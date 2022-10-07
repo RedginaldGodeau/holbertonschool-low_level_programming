@@ -7,12 +7,35 @@
 * Return: Always 0 (Success)
 */
 
+char * numtochar (int n) {
+	int u = n % 10;
+	int dix = n - u;
+	
+	char num[2];
+
+	return num;
+}
+
 void jack_bauer(void)
 {
 	int h, m;
-	
+
 	for (h = 0; h < 24 ; h++)
 		for (m = 0; m < 60; m++)
-			printf("%02d:%02d\n", h, m);
+		{
+			int u = h % 10;
+       			int dix = (h - u)/10;
+
+			_putchar(dix + '0');
+			_putchar(u + '0');
+			_putchar(':');
+			
+			u = m % 10;
+			dix = (m - u)/10;
+			
+			_putchar(dix + '0');
+                        _putchar(u + '0');
+			_putchar('\n');
+		}
 }
 
