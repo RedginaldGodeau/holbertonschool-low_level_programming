@@ -1,6 +1,2 @@
 all:
-	CC= gcc
-	files: main.c school.c
-	out: school
-
-	$(CC) $(files) -o $(out)
+	gcc main.c school.c -o school
