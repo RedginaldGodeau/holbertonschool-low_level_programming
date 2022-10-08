@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 /**
-* print_to_98 - Entry point...
+* _isupper - Entry point...
 * Description: 'the program desc'
 * Return: Always 0 (Success)
-* @n: int parmameter
+* @c: char parmameter
 */
 
 int _isupper(char c)
