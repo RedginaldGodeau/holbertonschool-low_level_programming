@@ -20,6 +20,7 @@ void print_triangle(int size)
             _putchar(' ');
          for (; i2 < i + (size - i); i2++)
             _putchar('#');
-        _putchar('\n');
+        if(i != size - 1 ) _putchar('\n');
     }
+    _putchar('\n');
 }
