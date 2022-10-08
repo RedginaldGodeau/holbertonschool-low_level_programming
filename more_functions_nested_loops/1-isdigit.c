@@ -5,10 +5,10 @@
 * _isdigit - Entry point...
 * Description: 'the program desc'
 * Return: Always 0 (Success)
-* @c: char parmameter
+* @c: int parmameter
 */
 
-int _isdigit(char c)
+int _isdigit(int c)
 {
     return (c >= '0' && c <= '9' ? 1 : 0);
 }
