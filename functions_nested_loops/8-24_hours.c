@@ -7,15 +7,6 @@
 * Return: Always 0 (Success)
 */
 
-char * numtochar (int n) {
-	int u = n % 10;
-	int dix = n - u;
-	
-	char num[2];
-
-	return num;
-}
-
 void jack_bauer(void)
 {
 	int h, m;
