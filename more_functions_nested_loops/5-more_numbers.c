@@ -21,7 +21,7 @@ void more_numbers(void)
 			int dix = (i2 - u) / 10;
 
 			if (dix > 0)
-			       _putchar('0' + dix);
+				_putchar('0' + dix);
 			_putchar('0' + u);
 		}
 		_putchar('\n');
