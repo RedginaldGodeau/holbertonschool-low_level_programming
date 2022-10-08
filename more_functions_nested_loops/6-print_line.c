@@ -2,13 +2,13 @@
 #include <stdio.h>
 
 /**
-* print_most_numbers - Entry point...
+* print_line - Entry point...
 * Description: 'the program desc'
 * Return: Always 0 (Success)
 * @n: int parmameter
 */
 
-void print_most_numbers(int n)
+void print_line(int n)
 {
     int i = 0;
 
