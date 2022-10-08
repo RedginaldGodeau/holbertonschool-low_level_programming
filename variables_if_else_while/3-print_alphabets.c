@@ -11,10 +11,10 @@ int main(void)
 {
 	char list = 'a';
 
-	for(; list <= 'z'; list++)
+	for (; list <= 'z'; list++)
 		putchar(list);
 
-	for(list = 'A'; list <= 'Z'; list++)
+	for (list = 'A'; list <= 'Z'; list++)
 		putchar(list);
 
 	putchar('\n');
