@@ -15,17 +15,17 @@ void jack_bauer(void)
 		for (m = 0; m < 60; m++)
 		{
 			int u = h % 10;
-       			int dix = (h - u)/10;
+			int dix = (h - u) / 10;
 
 			_putchar(dix + '0');
 			_putchar(u + '0');
 			_putchar(':');
-			
+
 			u = m % 10;
-			dix = (m - u)/10;
-			
+			dix = (m - u) / 10;
+
 			_putchar(dix + '0');
-                        _putchar(u + '0');
+			_putchar(u + '0');
 			_putchar('\n');
 		}
 }
