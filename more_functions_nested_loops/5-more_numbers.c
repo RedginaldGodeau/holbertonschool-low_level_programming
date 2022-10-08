@@ -9,9 +9,13 @@
 
 void print_most_numbers()
 {
-    for (int i = 0; i < 10; i++)
+    int i = 0;
+
+    for (; i < 10; i++)
     {
-        for (int i2 = 0; i2 <= 14; i2++)
+        int i2 = 0;
+        
+        for (; i2 <= 14; i2++)
         {
             int u = i2 % 10;
             int dix = (i2 - u) / 10;
