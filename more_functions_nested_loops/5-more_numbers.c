@@ -20,7 +20,7 @@ void more_numbers(void)
             int u = i2 % 10;
             int dix = (i2 - u) / 10;
 
-            _putchar('0' + dix);
+            if(dix > 0) _putchar('0' + dix);
             _putchar('0' + u);
         }
          _putchar('\n');
