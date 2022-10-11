@@ -1,7 +1,7 @@
 #include "main.c"
 
 /**
-* times_table - Entry point...
+* swap_int - Entry point...
 * Description: 'the program desc'
 * Return: Always 0 (Success)
 * @a: pointer

@@ -1,14 +1,17 @@
->#include "main.c"
-  
-  /**
-  * times_table - Entry point...
-  * Description: 'the program desc'
-  * Return: Always 0 (Success)
-  * @str: pointer
-  */
-  
-  int _puts(char *str);
-  {
-          while(*s != '\0')
-                  _putchar(*(s++));
-  }
+#include "main.h"
+
+/**
+* puts2 - Entry point...
+* Description: 'the program desc'
+* Return: Always 0 (Success)
+* @str: pointer
+*/
+
+int puts2(char *str)
+{
+	int i = 0;
+
+	for (; str[i] != '\0'; i++)
+		if (i % 2 == 0)
+			_putchar(str[i]);
+}

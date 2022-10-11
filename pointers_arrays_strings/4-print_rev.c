@@ -1,20 +1,21 @@
-#include "main.c"
+#include "main.h"
 
 /**
-* times_table - Entry point...
+* print_rev - Entry point...
 * Description: 'the program desc'
 * Return: Always 0 (Success)
-* @str: pointer
+* @s: pointer
 */
 
-int _puts(char *str);
+int print_rev(char *s)
 {
-	int *p = &str[0];
+	int i, len;
 
-	while(*s++ != '\0')
+	for (i = 0; s[i] != '\0'; i++)
 		;
+	len = i;
 
-	 while(*s != s[0]);
-		_putchar(s--);
-	_putchar('\n');
+	while (i >= 0)
+		_putchar(s[i--]);
+	_purchar('\n');
 }

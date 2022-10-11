@@ -1,14 +1,14 @@
-#include "main.c"
+#include "main.h"
 
 /**
-* times_table - Entry point...
+* _puts - Entry point...
 * Description: 'the program desc'
 * Return: Always 0 (Success)
 * @str: pointer
 */
 
-int _puts(char *str);
+int _puts(char *str)
 {
-	while(*s != '\0')
-		_putchar(*(s++));
+	while (*str)
+		_putchar(*str++);
 }

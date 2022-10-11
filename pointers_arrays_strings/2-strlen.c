@@ -1,16 +1,18 @@
-#include "main.c"
+#include "main.h"
 
 /**
-* times_table - Entry point...
+* _strlen - Entry point...
 * Description: 'the program desc'
 * Return: Always 0 (Success)
 * @s: pointer
 */
 
-int _strlen(char *s);
+int _strlen(char *s)
 {
 	int i = 0;
 
-	for(; s[i] != '\n' ; i++);
+	for (; *s++ ; i++)
+		;
+
 	return (i);
 }
