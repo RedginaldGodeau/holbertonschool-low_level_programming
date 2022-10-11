@@ -9,13 +9,12 @@
 
 void rev_string(char *s)
 {
-	int len,i = 0;
+	int len = 0;
+	int i = 0;
 
 	for (; s[len] != '\0'; len++)
 		;
 	len--;
-	
-	i = len;
 
 	for (; i <= len / 2; i++)
 	{
@@ -25,5 +24,5 @@ void rev_string(char *s)
 		s[i] = s[pos];
 		s[pos] = tmp;
 	}
-	s[len + 1] = '\0';
+	s[i + 1] = '\0';
 }
