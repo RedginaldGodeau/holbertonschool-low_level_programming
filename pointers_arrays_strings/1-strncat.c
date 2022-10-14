@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* strncat - Entry point...
+* _strncat - Entry point...
 * Description: 'the program desc'
 * Return: Always 0 (Success)
 * @dest: pointer parmameter
