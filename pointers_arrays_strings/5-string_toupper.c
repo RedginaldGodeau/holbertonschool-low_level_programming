@@ -14,10 +14,10 @@ char *string_toupper(char *p)
 
 	do
 	{
-		if(*p >= 'a' && *p <= 'z')
+		if (*p >= 'a' && *p <= 'z')
 			*p -= 32;
 	}
-	while(*p++);
+	while (*p++);
 
-	return tmp;
+	return (tmp);
 }
