@@ -12,8 +12,9 @@
 void reverse_array(int *a, int n)
 {
 	int i = 0;
+	int max = (n / 2 % 2 != 0 ? n / 2 : n / 2 + 1);
 
-	for (; i <= n/2; i++ )
+	for (; i <= max; i++ )
 	{
 		int tmp = a[i]; 
 		a[i] = a[n - i];
