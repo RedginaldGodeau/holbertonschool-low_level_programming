@@ -18,7 +18,7 @@ char *leet(char *s)
 		int i2 = 0;
 
 		for (; l[i2] != '\0'; i2++)
-			if(s[i] == l[i2] || s[i] == l[i2] - 32)
+			if (s[i] == l[i2] || s[i] == l[i2] - 32)
 				s[i] = t[i2];
 	}
 

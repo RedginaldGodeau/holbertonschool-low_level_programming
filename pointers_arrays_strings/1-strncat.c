@@ -10,7 +10,7 @@
 * @n: int parameter
 */
 
-char *strcat(char *dest, char *src, int n)
+char *_strcat(char *dest, char *src, int n)
 {
 	int dest_len = 0;
 	int src_len = 0;
