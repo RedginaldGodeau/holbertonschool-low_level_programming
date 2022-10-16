@@ -25,7 +25,7 @@ char *_strchr(char *s, char c)
 		return (NULL);
 	
 	i = 0;
-	while (s[pos] != '\0)
+	while (s[pos] != '\0')
 		tmp[i++] = s[pos++];
 	tmp[i] = '\0';
 
