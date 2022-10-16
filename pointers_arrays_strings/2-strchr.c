@@ -8,14 +8,14 @@
 * @c: char parmameter
 */
 
-char *_strchr (char *s, char c)
+char *_strchr(char *s, char c)
 {
 
 	int i, pos = -1;
 	char tmp[500];
 	char *ptr = tmp;
 
-	for(; s[i] != '\0'; i++)
+	for (; s[i] != '\0'; i++)
 		if (s[i] == c)
 		{
 			pos = i;
@@ -23,7 +23,7 @@ char *_strchr (char *s, char c)
 		}
 	if (pos == -1)
 		return (NULL);
-	
+
 	i = 0;
 	while (s[pos] != '\0')
 		tmp[i++] = s[pos++];
