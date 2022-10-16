@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
-* _strcar - Entry point...
+* _strcat - Entry point...
 * Description: 'the program desc'
 * Return: Always 0 (Success)
 * @dest: pointer parmameter
