@@ -22,7 +22,7 @@ char *_strchr(char *s, char c)
 			break;
 		}
 	if(pos == -1)
-		return (NULL)
+		return (NULL);
 	
 	i = 0;
 	while (s[pos] != '\0)
