@@ -10,21 +10,24 @@
 
 char *_strchr(char *s, char c)
 {
+
+	int i,pos = -1;
 	char tmp[99];
 	char *ptr = tmp;
-	short int after = 0;
-	int i = 0;
 
-	do
-	{
-		if (!after && *s == c)
-                        after = 1;
-		else if (after)
-			tmp[i++] = *s;
-		
-	} while (*s++);
+	for(; s[i] != '\0'; i++)
+		if(s[i] == c)
+		{
+			pos = i;
+			break;
+		}
+	if(pos == -1)
+		return (NULL)
 	
-
+	i = 0;
+	while (s[pos] != '\0)
+		tmp[i++] = s[pos++];
+	tmp[i] = '\0';
 
 	return (ptr);
 }
