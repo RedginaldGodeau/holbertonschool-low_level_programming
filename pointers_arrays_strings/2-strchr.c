@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stddef.h>
 /**
 * _strchr - Entry point...
 * Description: 'the program desc'
