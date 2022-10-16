@@ -13,7 +13,7 @@ void print_chessboard(char (*a)[8])
 {
 	int i, i2;
 
-	for (i = 0; i < sizeof(a); i++)
+	for (i = 0; i < (int) sizeof(a); i++)
 	{
 		for (i2 = 0; i2 < (int) sizeof(a); i2++)
 			printf("%c", a[i][i2]);
