@@ -12,12 +12,12 @@
 
 void print_diagsums(int *a, int size)
 {
-	int i,calc = 0;
+	int i, calc = 0;
 
 	for (i = 0; i < size; i++)
 		calc += a[i * size + i];
 	printf("%d, ", calc);
-	
+
 	calc = 0;
 
 	for (i = 1; i <= size; i++)
