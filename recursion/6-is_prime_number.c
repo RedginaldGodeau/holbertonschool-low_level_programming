@@ -4,11 +4,10 @@
 * is_prime_number - Entry point...
 * Description: 'the program desc'
 * Return: Always 0 (Success)
-* @x: int parmameter
-* @y: int parmameter
+* @n: int parmameter
 */
 
-int prime (int n, int i)
+int prime(int n, int i)
 {
 	if (n <= 1)
                 return (0);
@@ -22,7 +21,7 @@ int prime (int n, int i)
         return prime (n, i + 2);
 }
 
-int is_prime_number (int n)
+int is_prime_number(int n)
 {
 	return prime (n, 2);
 }
