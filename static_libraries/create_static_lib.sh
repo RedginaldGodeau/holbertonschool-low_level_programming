@@ -1,5 +1,2 @@
 #!/bin/bash
-
-gcc -c "*.c"
-ar -rsc liball.a "*.o"
-
+gcc -c *.c && ar -rsc liball.a *.o
