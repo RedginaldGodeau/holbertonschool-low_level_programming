@@ -32,5 +32,5 @@ int square(int low, int high, int n)
 
 int _sqrt_recursion(int n)
 {
-	return (square(0,n,n));
+	return (square(0, n, n));
 }
