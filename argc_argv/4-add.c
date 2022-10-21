@@ -18,11 +18,11 @@ int main(int argc, char *argv[])
 
 	for (; i < argc; i++)
 	{
-		for (; argv[i][i2] != '\0'; i2++)
+		for (i2 = 0; argv[i][i2] != '\0'; i2++)
 			if (isdigit(argv[i][i2] == 0))
 			{
 				printf("Error\n");
-				return -1;
+				return (-1);
 			}
 
 		calc += atoi(argv[i]);
