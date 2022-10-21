@@ -11,14 +11,14 @@
 
 int main(int argc, char *argv[])
 {
+	int i = 1;
+	int calc = 0;
+
 	if (argc < 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-
-	int calc = 0;
-	int i = 1;
 
 	for (; i < argc; i++)
 		calc += atoi(argv[i]);
