@@ -16,6 +16,9 @@
 
 int square(int low, int high, int n)
 {
+	if (n < 0) 
+		return (-1);
+
 	if (low <= high)
 	{
 		int mid = (low + high) / 2;
