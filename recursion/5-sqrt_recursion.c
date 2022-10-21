@@ -19,7 +19,7 @@ int square(int low, int high, int n)
 	if (low <= high)
 	{
 		int mid = (low + high) / 2;
-		if ((mid * mid) && (mid + 1) * (mid + 1) > n)
+		if ((mid * mid <= n) && (mid + 1) * (mid + 1) > n)
 			return mid;
 		else if (mid * mid < n)
 			return (square(low, mid - 1, n));
