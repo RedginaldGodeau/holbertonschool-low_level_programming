@@ -8,7 +8,7 @@
 */
 
 /**
-* prime - Entry point...
+* prime - func p...
 * Description: 'the program desc'
 * Return: Always 0 (Success)
 * @n: int parmameter
