@@ -12,15 +12,19 @@
 int main(int argc, char *argv[])
 {
 	int i = 1;
+	int i2 = 0;
 	int calc = 0;
 
-	if (argc < 2)
-	{
-		printf("Error\n");
-		return (1);
-	}
-
 	for (; i < argc; i++)
+	{
+		for (; argv[i][i2] != '\0'; i2++)
+			if (isdigit(argv[i][i2] == 0))
+			{
+				printf("Error\n");
+				return -1;
+			}
+
+	}
 		calc += atoi(argv[i]);
 
 	printf("%d\n", calc);
