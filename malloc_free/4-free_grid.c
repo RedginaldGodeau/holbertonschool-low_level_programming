@@ -1,4 +1,5 @@
-#include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
 * free_grid - Entry point...
