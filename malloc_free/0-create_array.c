@@ -12,11 +12,13 @@
 char *create_array(unsigned int size, char c)
 {
 	char *ptr = malloc(sizeof(char) * size);
+	int i = 0;
 
 	if (size < 1)
 		return (NULL);
 
-	*ptr = c;
+	for (; i < size; i++)
+		ptr[i] = c;
 
 
 	return (ptr);
