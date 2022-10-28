@@ -14,14 +14,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int len1, len2;
 	int i = 0;
 
-	for (len1 = 0; s1[len1] != '\0'; len1++)
+	for (len1 = 0; s1 == NULL && s1[len1] != '\0'; len1++)
 		;
-	for (len2 = 0; s2[len2] != '\0'; len2++)
+	for (len2 = 0; s2 == NULL && s2[len2] != '\0'; len2++)
 		;
 
 	ptr = malloc(n + len1);
 	if (ptr == NULL)
-		return (1);
+		return (NULL);
 
 	for (; i < len1; i++)
 		ptr[i] = s1[i];
