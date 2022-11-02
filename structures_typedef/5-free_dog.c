@@ -12,5 +12,7 @@ void free_dog(struct dog *d)
 	if (!d)
 		return;
 
+	free(d->name);
+	free(d->owner);
 	free(d);
 }
