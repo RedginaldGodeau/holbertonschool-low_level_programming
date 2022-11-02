@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "dog.h"
 
 /**
 * init_dog - Entry point...
@@ -10,14 +11,6 @@
 * @age: float parmameter
 * @owner: pointer parmameter
 */
-
-struct dog
-{
-	char *name;
-	char *owner;
-	float age;
-};
-
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
