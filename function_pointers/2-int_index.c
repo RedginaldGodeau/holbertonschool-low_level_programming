@@ -9,13 +9,13 @@
 * @cmp: func parameter
 */
 
-int int_index(int *array, size_t size, void (*cmp)(int))
+int int_index(int *array, size_t size, int (*cmp)(int))
 {
 	size_t  i = 0;
 	int n = 0;
 
 	if (!array || !cmp)
-		return;
+		return (0);
 
 	for (; i < size; i++)
 		if ((*cmp)(array[i]))
