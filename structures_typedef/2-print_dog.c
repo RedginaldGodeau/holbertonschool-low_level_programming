@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include "dog.h"
 
 /**
 * print_dog - Entry point...

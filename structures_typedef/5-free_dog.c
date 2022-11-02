@@ -1,5 +1,5 @@
 #include <stdlib.h>
-
+#include "dog.h"
 /**
 * free_dog - Entry point...
 * Description: 'the program desc'

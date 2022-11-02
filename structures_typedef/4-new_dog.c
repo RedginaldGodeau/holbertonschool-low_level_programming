@@ -1,5 +1,5 @@
 #include <stdlib.h>
-
+#include "dog.h"
 /**
 * free_dog - Entry point...
 * Description: 'the program desc'
@@ -11,6 +11,6 @@ void free_dog(struct dog *d)
 {
 	if (!d)
 		return;
-	
+
 	free(d);
 }
