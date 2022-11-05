@@ -39,12 +39,14 @@ void print_all(const char *format, ...)
 				b = 1;
 				break;
 			case 's':
+			{
 				char *p = va_arg(args, char *);
 
 				p = p != NULL ? p : strdup("(nil)");
 				printf("%s%s", sep, p);
 				b = 1;
 				break;
+			}
 		}
 
 		i++;
