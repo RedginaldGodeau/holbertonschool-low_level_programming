@@ -19,7 +19,7 @@ void print_all(const char *format, ...)
 	short int b = 0;
 
 	va_start(args, format);
-	while (format[i] != '\0' || format != NULL)
+	while (format[i] != '\0' && format != NULL)
 	{
 		if (b == 1)
 			sep = ", ";
