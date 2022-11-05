@@ -30,9 +30,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			arg = strdup("(nil)");
 
 		if (i > 0)
-			printf("%s%s", separator, va_arg(args, char *));
+			printf("%s%s", separator, arg);
 		else
-			printf("%s", va_arg(args, char *));
+			printf("%s", arg);
 	}
 	printf("\n");
 
