@@ -24,7 +24,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	for (; i < (int) n; i++)
 	{
-		char arg = va_arg(args, char *);
+		char *arg = va_arg(args, char *);
 
 		if (!arg)
 			arg = strdup("(nil)");
