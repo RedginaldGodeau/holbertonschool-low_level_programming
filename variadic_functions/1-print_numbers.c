@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdarg.h>
+#include <string.h>
 
 /**
 * print_numbers - Entry point...
@@ -14,7 +15,10 @@
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list args;
-	int i = 0;
+	int i = 0
+		;
+	if (!separator)
+		separator = strdup("");
 
 	va_start(args, n);
 
