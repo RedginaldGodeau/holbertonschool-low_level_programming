@@ -20,7 +20,7 @@ void print_all(const char *format, ...)
 	if (!format)
 		return;
 
-	va_start(args, strlen(format));
+	va_start(args, format);
 	while (format[i] != '\0')
 	{
 		switch (format[i])
