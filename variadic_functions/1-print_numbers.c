@@ -3,7 +3,7 @@
 #include <stdarg.h>
 
 /**
-* print_strings - Entry point...
+* print_numbers - Entry point...
 * Description: 'the program desc'
 * Return: Always 0 (Success)
 * @separator: separtor char
@@ -11,7 +11,7 @@
 * @...: args parmameter
 */
 
-void print_strings(const char *separator, const unsigned int n, ...)
+void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list args;
 	int i = 0;
