@@ -16,6 +16,7 @@ void print_all(const char *format, ...)
 	va_list args;
 	char *sep = "";
 	int i = 0;
+	short int b = 0;
 
 	if (!format)
 		return;
@@ -23,24 +24,28 @@ void print_all(const char *format, ...)
 	va_start(args, format);
 	while (format[i] != '\0')
 	{
+		if (b == 1)
+			sep = ", ";
+
 		switch (format[i])
 		{
 			case 'c':
 				printf("%s%c",  sep, (char) va_arg(args, int));
+				b = 1;
 				break;
 			case 'i':
 				printf("%s%d", sep, (int) va_arg(args, int));
+				b = 1;
 				break;
 			case 'f':
 				printf("%s%f", sep, (float) va_arg(args, double));
+				b = 1;
 				break;
 			case 's':
 				printf("%s%s", sep, va_arg(args, char *));
+				b = 1;
 				break;
 		}
-
-		if (i == 0)
-			sep = ", ";
 
 		i++;
 	}
