@@ -18,11 +18,8 @@ void print_all(const char *format, ...)
 	int i = 0;
 	short int b = 0;
 
-	if (!format)
-		return;
-
 	va_start(args, format);
-	while (format[i] != '\0')
+	while (format[i] != '\0' || format != NULL)
 	{
 		if (b == 1)
 			sep = ", ";
@@ -42,7 +39,10 @@ void print_all(const char *format, ...)
 				b = 1;
 				break;
 			case 's':
-				printf("%s%s", sep, va_arg(args, char *));
+				char *p = va_arg(args, char *);
+
+				p = p != NULL ? p : strdup("(nil)");
+				printf("%s%s", sep, p);
 				b = 1;
 				break;
 		}
