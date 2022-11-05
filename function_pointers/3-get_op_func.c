@@ -6,27 +6,13 @@
 * Description: 'the program desc'
 */
 
-int op_add(int a, int b)
+int get_op_func(*s)
 {
-	return (a + b);
-}
+	int a = 0;
+	if (ops[a++].op[0] == argv[2][0] || ops[a++].op[0] == argv[2][0] ||
+      ops[a++].op[0] == argv[2][0] || ops[a++].op[0] == argv[2][0] ||
+      ops[a++].op[0] == argv[2][0] || ops[a++].op[0] == argv[2][0])
+	;
 
-int op_sub(int a, int b)
-{
-	return (a - b);
-}
-
-int op_mult(int a, int b)
-{
-	return (a * b);
-}
-
-int op_div(int a, int b)
-{
-	return (a / b);
-}
-
-int op_mod(int a, int b)
-{
-	return (a % b);
+	return (a);
 }
