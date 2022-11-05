@@ -18,7 +18,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	int i = 0;
 
 	if (!separator)
-		sperator = strdup("");
+		separator = strdup("");
 
 	va_start(args, n);
 
