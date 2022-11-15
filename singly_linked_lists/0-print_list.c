@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "lists.h"
+#include "main.h"
 
 /**
 * parse_int - print all parms.
