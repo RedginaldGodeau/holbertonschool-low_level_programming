@@ -16,7 +16,6 @@ void parse_int(int n, int r, int mul)
 	if (f > 9)
 	{
 		f = (n / mul) % 10;
-
 		r -= f * mul;
 		mul *= 10;
 
@@ -46,7 +45,7 @@ size_t print_list(const list_t *h)
 			;
 
 	_putchar('[');
-	parse_int(i, i, 10);
+	parse_int(i, i, 1);
 	_putchar(']');
 	_putchar(' ');
 
