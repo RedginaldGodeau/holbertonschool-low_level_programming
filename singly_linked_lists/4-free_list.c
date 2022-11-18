@@ -14,29 +14,19 @@
 
 void free_list(list_t *head)
 {
-	list_t *nex, *save;
+	list_t *tmp;
 
-	if (!head)
-		return;
-
-	nex = malloc(sizeof(list_t));
-	if (!nex)
-		return;
-
-	save = malloc(sizeof(list_t));
-	if (!save)
-		return;
-
-	while (nex)
+	while (head)
 	{
-		if (nex->str)
-			free(nex->str);
-		save = nex->next;
-		free(nex);
-		nex = save;
+		tmp = head;
+		head = head->next;
+
+		if (tmp->str)
+			free(tmp->str);
+
+		free(tmp);
 	}
 
 	free(head);
-	free(nex);
-	free(save);
+	free(tmp);
 }
