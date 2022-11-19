@@ -10,10 +10,10 @@
 
 int pop_listint (listint_t **head)
 {
-	if (head && (*head))
+	if (!head)
 		return (0);
 
-	(*head) = (*head)->next;
+	*head = (*head)->next;
 
 	return (1);
 }
