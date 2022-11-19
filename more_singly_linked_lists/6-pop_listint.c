@@ -13,11 +13,7 @@ int pop_listint (listint_t **head)
 	if (head && (*head))
 		return (0);
 
-	while (head)
-		(*head) = (*head)->next;
-
-	free(head);
-	(*head) = NULL;
+	(*head) = (*head)->next;
 
 	return (1);
 }
