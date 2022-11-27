@@ -17,10 +17,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (!f)
 		return (0);
 
+	if (letters > 1024)
+		printf("[stderr]:\n");
+
 	while (read(f, &buffer, 1) > 0 && i < (int) letters)
 		i += (ssize_t) write(1, &buffer, 1);
 	
 	close(f);
 	return (i);
-
 }
