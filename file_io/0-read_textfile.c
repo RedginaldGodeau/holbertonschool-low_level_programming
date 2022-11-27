@@ -10,18 +10,20 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int f = open(filename, O_RDONLY, 0);
-	char buffer;
+	int f = open(filename, O_RDONLY, 0),err;
+	char buffer[1024];
 	ssize_t i = 0;
 
 	if (!f)
 		return (0);
 
-	if (letters > 1024)
-		printf("[stderr]:\n");
-
-	while (read(f, &buffer, 1) > 0 && i < (int) letters)
-		i += (ssize_t) write(1, &buffer, 1);
+	err = 1;
+	while (err > 0 read(f, &buffer, 1024) > 0 && i < (int) letters)
+	{
+		err = read(f, &buffer, 1);
+		if (err == -1)
+			dprintf(STDERR_FILENO, "%s", buffer);
+	}	i += (ssize_t) write(1, &buffer, err);
 	
 	close(f);
 	return (i);
