@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
 
 	if (close(fc) == -1)
 	{
-		dprintf(fc,"Error: Can't close fd FD_VALUE");
+		dprintf(fc,"%s", POSIX);
 		return (100);
 	}
 	if (close(fp) == -1)
