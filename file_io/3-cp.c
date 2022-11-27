@@ -9,12 +9,12 @@
 
 #include "main.h"
 
-int print_err_str(int err, const *char str, const *char value)
+int print_err_str(int err, char *str, const char *value)
 {
 	if (value)
 		dprintf(STDERR_FILENO, str, value);
 	else
-		dprintf(STDERR_FILENO, str);	
+		dprintf(STDERR_FILENO, str, NULL);	
 	return (err);
 }
 
@@ -24,7 +24,7 @@ int print_err_str(int err, const *char str, const *char value)
 * Return: Always 0 (Success)
 */
 
-int print_err_int(int err, const *char str, int value)
+int print_err_int(int err, char *str, int value)
 {
 	dprintf(STDERR_FILENO, str, value);
 	return (err);
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 	char buffer[1024];
 	
 	if (argc == 2)
-		return (print_err_str(97, "Usage: cp file_from file_to\n"));
+		return (print_err_str(97, "Usage: cp file_from file_to\n",NULL));
 
 	if (!argv[1])
 		return (print_err_str(98, "Error: Can't read from file %s\n", argv[1]));
