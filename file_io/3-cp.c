@@ -51,10 +51,10 @@ int main(int argc, char *argv[])
 	status = close(fc);
 	if (status == -1)
 	{
-		dprintf(fc,"Error: Can't close fd %d", status);
+		dprintf(STDERR_FILENO,"Error: Can't close fd %d", status);
 		return (100);
 	}
-	status = close(fc);
+	status = close(fp);
 	if (status == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d", status);
