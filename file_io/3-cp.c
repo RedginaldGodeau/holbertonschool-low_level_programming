@@ -50,12 +50,12 @@ int main(int argc, char *argv[])
 
 	if (close(fc) == -1)
 	{
-		dprintf(fc,"%s", "Error: Can't close fd FD_VALUE");
+		dprintf(fc,"Error: Can't close %d", fc);
 		return (100);
 	}
 	if (close(fp) == -1)
 	{
-		dprintf(fp,"Error: Can't close fd FD_VALUE");
+		dprintf(fp,"Error: Can't close %d", fp);
 		return (100);
 	}
 
