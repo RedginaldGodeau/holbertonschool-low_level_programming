@@ -12,12 +12,13 @@ int main(int argc, char *argv[])
 {
 	int fc, fp, status;
 	char buffer[1024];
-
+	
 	if (argc == 2)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		return (97);
 	}
+
 	if (!argv[1])
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
@@ -41,16 +42,20 @@ int main(int argc, char *argv[])
 		return (99);
 	}
 
-	status = read(fc, &buffer, 1024);
-	if (status == -1)
+	status = 1;
+	while (status != 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		return (98);
-	}
-	if (write(fp, &buffer, status) == -1)
-	{
-		dprintf(STDERR_FILENO,"Error: Can't write to %s\n", argv[2]);
-		return (99);
+		status = read(fc, &buffer, 1024);
+		if (status == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			return (98);
+		}
+		if (write(fp, &buffer, status) == -1)
+		{
+			dprintf(STDERR_FILENO,"Error: Can't write to %s\n", argv[2]);
+			return (99);
+		}
 	}
 
 	status = close(fc);
