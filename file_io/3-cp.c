@@ -37,14 +37,14 @@ int main(int argc, char *argv[])
 
 	if (fp == -1)
 	{
-		printf("Error: Can't write to NAME_OF_THE_FILE");
+		dprintf("Error: Can't write to %s", argv[2]);
 		return (98);
 	}
 	
 	while (read(fc, &buffer, 1) > 0)
 		if (write(fp, &buffer, 1) == -1)
 		{
-			dprintf(STDERR_FILENO,"Error: Can't write to NAME_OF_THE_FILE");
+			dprintf(STDERR_FILENO,"Error: Can't write to %s", argv[2]);
 			return (99);
 		}
 
