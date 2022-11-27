@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int fc, fp;
+	int fc, fp, status;
 	char buffer;
 
 	if (argc == 2)
@@ -44,18 +44,20 @@ int main(int argc, char *argv[])
 	while (read(fc, &buffer, 1) > 0)
 		if (write(fp, &buffer, 1) == -1)
 		{
-			dprintf(fp,"Error: Can't write to NAME_OF_THE_FILE");
+			dprintf(STDERR_FILENO,"Error: Can't write to NAME_OF_THE_FILE");
 			return (99);
 		}
 
-	if (close(fc) == -1)
+	status = close(fc);
+	if (status == -1)
 	{
-		dprintf(fc,"Error: Can't close %d", fc);
+		dprintf(fc,"Error: Can't close fd %d", status);
 		return (100);
 	}
-	if (close(fp) == -1)
+	status = close(fc);
+	if (status == -1)
 	{
-		dprintf(fp,"Error: Can't close %d", fp);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", status);
 		return (100);
 	}
 
