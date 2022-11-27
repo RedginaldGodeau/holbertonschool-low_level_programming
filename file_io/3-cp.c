@@ -19,6 +19,9 @@ int print_err_str(int err, char *str, const char *value)
 * print_err_int - Entry point...
 * Description: 'the program desc'
 * Return: Always 0 (Success)
+* @err: file parmameter
+* @str: text in file parameter
+* @value: str parameter
 */
 
 int print_err_int(int err, char *str, int value)
@@ -39,7 +42,7 @@ int main(int argc, char *argv[])
 {
 	int fc, fp, status;
 	char buffer[1024];
-	
+
 	if (argc == 2)
 		return (print_err_str(97, "Usage: cp file_from file_to\n", NULL));
 
