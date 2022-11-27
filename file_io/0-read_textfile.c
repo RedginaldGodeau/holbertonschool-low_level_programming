@@ -20,10 +20,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	err = 1;
 	while (err != 0 && i < (int) letters)
 	{
-		err = read(f, &buffer, 1);
+		err = read(f, buffer, 1024);
 		if (err == -1)
 			dprintf(STDERR_FILENO, "%s", buffer);
-	}	i += (ssize_t) write(1, &buffer, err);
+	}	i += (ssize_t) write(1, buffer, err);
 	
 	close(f);
 	return (i);
