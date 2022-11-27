@@ -19,12 +19,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buffer = malloc(sizeof(char) * letters + 1);
 	buffer[letters + 1] = '\0';
 
-	err = read(f, buffer, letters);
-	if (err == -1)
-	{
-		return (0);
-	}
-
+	read(f, buffer, letters);
 	err = write(1, buffer, letters);
 	if (err == -1)
 	{
