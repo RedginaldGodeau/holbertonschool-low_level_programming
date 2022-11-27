@@ -19,13 +19,17 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buffer = malloc(sizeof(char) * letters + 1);
 	buffer[letters + 1] = '\0';
 
-	read(f, buffer, letters);
-	err = write(1, buffer, letters);
+	err = read(f, buffer, letters);
 	if (err == -1)
 	{
 		dprintf(1, "%s", buffer);
 		return (0);
 	}
+	
+	err = 0;
+
+	while (buffer[err] != '\0')
+		err += write(1, &buffer[err], 1);
 	
 	close(f);
 	return ((ssize_t) err);
