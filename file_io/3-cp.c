@@ -15,19 +15,19 @@ int main(int argc, char *argv[])
 
 	if (argc == 2)
 	{
-		printf("Usage: cp file_from file_to");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		return (97);
 	}
 	if (!argv[1])
 	{
-		printf("Error: Can't read from file NAME_OF_THE_FILE");
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		return (98);
 	}
 
 	fc = open(argv[1], O_RDONLY);
 	if (fc == -1)
 	{
-		printf("Error: Can't read from file NAME_OF_THE_FILE");
+		dprintf(STDERR_FILENO, "Error: Can't read from file %si\n", argv[1]);
 		return (98);
 	}
 
@@ -37,14 +37,14 @@ int main(int argc, char *argv[])
 
 	if (fp == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		return (98);
 	}
 	
 	while (read(fc, &buffer, 1) > 0)
 		if (write(fp, &buffer, 1) == -1)
 		{
-			dprintf(STDERR_FILENO,"Error: Can't write to %s", argv[2]);
+			dprintf(STDERR_FILENO,"Error: Can't write to %s\n", argv[2]);
 			return (99);
 		}
 
