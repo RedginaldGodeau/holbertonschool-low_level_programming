@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int fc, fp, status;
-	char buffer;
+	char buffer[1024];
 
 	if (argc == 2)
 	{
@@ -41,22 +41,18 @@ int main(int argc, char *argv[])
 		return (99);
 	}
 
-	status = 1;
-	while (status > 0)
+	status = read(fc, &buffer, 1024);
+	if (status == -1)
 	{
-		status = read(fc, &buffer, 1);
-		if (status == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-                	return (99);
-		}
-
-		if (write(fp, &buffer, 1) == -1)
-		{
-			dprintf(STDERR_FILENO,"Error: Can't write to %s\n", argv[2]);
-			return (99);
-		}
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		return (98);
 	}
+	if (write(fp, &buffer, status) == -1)
+	{
+		dprintf(STDERR_FILENO,"Error: Can't write to %s\n", argv[2]);
+		return (99);
+	}
+
 	status = close(fc);
 	if (status == -1)
 	{
