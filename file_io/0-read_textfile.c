@@ -11,19 +11,26 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int f = open(filename, O_RDONLY, 0),err;
-	char buffer;
+	char *buffer;
 	ssize_t i = 0;
 
 	if (!f)
 		return (0);
+	
+	buffer = malloc(sizeof(char) * letters + 1);
+	buffer[letters + 1] = '\0';
 
-	err = 1;
-	while (err > 0 && i < (int) letters)
+	err = read(f, buffer, letters);
+	if (err == -1)
 	{
-		err = read(f, &buffer, 1);
-		i += (ssize_t) write(1, &buffer, 1);
-		if (err == -1)
-			dprintf(STDERR_FILENO, "%s", buffer);
+		return (0);
+	}
+
+	err = write(1, buffer, letters);
+	if (err == -1)
+	{
+		dprintf(1, "%s", buffer);
+		return (0);
 	}
 	
 	close(f);
