@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	fc = open(argv[1], O_RDONLY);
 	if (fc == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %si\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		return (98);
 	}
 
@@ -38,16 +38,25 @@ int main(int argc, char *argv[])
 	if (fp == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		return (98);
+		return (99);
 	}
-	
-	while (read(fc, &buffer, 1) > 0)
+
+	status = 1;
+	while (status > 0)
+	{
+		status = read(fc, &buffer, 1);
+		if (status == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+                	return (99);
+		}
+
 		if (write(fp, &buffer, 1) == -1)
 		{
 			dprintf(STDERR_FILENO,"Error: Can't write to %s\n", argv[2]);
 			return (99);
 		}
-
+	}
 	status = close(fc);
 	if (status == -1)
 	{
