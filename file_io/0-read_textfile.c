@@ -12,7 +12,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int f = open(filename, O_RDONLY, 0),err;
 	char *buffer;
-	ssize_t i = 0;
 
 	if (!f)
 		return (0);
@@ -34,5 +33,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	
 	close(f);
-	return (i);
+	return ((ssize_t) err);
 }
