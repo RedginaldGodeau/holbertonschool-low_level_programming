@@ -35,7 +35,7 @@ int print_err_int(int err, char *str, int value)
 * Description: 'the program desc'
 * Return: Always 0 (Success)
 * @argv: files parmameter
-* @argv: int parameter
+* @argc: int parameter
 */
 
 int main(int argc, char *argv[])
