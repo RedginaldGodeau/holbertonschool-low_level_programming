@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 
 	if (fp == -1)
 	{
-		dprintf("Error: Can't write to %s", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
 		return (98);
 	}
 	
