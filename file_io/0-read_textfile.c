@@ -18,7 +18,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	err = 1;
-	while (err > 0 read(f, &buffer, 1024) > 0 && i < (int) letters)
+	while (err > 0 && i < (int) letters)
 	{
 		err = read(f, &buffer, 1);
 		if (err == -1)
