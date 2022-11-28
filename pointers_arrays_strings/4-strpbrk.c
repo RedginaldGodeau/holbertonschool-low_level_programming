@@ -11,17 +11,19 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	char str[1024];
-	char *ptr;
-	int i, i2;
-	int l = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	char *str;
+	int len = 0, i = 0, i2, c = 0;
+
+	for (; s[len] != '\0'; len++)
+		;
+
+	str = malloc(sizeof(char) * len + 1);
+	
+	for (; *s[i] != '\0'; i++)
 		for (i2 = 0; accept[i2] != '\0'; i2++)
-			if (s[i] == accept[i2])
-				str[l++] = s[i];
-	str[l + 1] = '\0';
-	ptr = str;
-
-	return (ptr);
+			if (accept[i2] == s[i])
+				str[c++] = s[i];
+	str[c + 1] = '\0';
+	return (str);
 }
