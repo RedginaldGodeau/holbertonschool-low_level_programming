@@ -20,7 +20,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buffer[letters + 1] = '\0';
 
 	err = read(f, buffer, letters);
-	if (err == -1)
+	if (err < letters)
 	{
 		dprintf(STDERR_FILENO, "%s", buffer);
 		return (0);
