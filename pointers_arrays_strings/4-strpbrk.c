@@ -20,7 +20,7 @@ char *_strpbrk(char *s, char *accept)
 
 	str = malloc(sizeof(char) * len + 1);
 	
-	for (; *s[i] != '\0'; i++)
+	for (; s[i] != '\0'; i++)
 		for (i2 = 0; accept[i2] != '\0'; i2++)
 			if (accept[i2] == s[i])
 				str[c++] = s[i];
