@@ -19,7 +19,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	while (rd != 0 && length < letters)
 	{
-		rd = read(f, &buffer, 1024);
+		rd = read(f, &buffer, 1);
 		if (rd == -1)
 		{
 			close(f);
