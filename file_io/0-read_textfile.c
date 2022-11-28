@@ -23,6 +23,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (err < (int) letters)
 	{
 		dprintf(STDERR_FILENO, "%s", buffer);
+		close(f);
 		return (0);
 	}
 	err = 0;
