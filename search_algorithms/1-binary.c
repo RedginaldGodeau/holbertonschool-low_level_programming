@@ -49,6 +49,8 @@ int b_search(int *array, size_t left, size_t right, int search)
  */
 int binary_search(int *array, size_t size, int value)
 {
+	if (!array)
+		return (-1);
+
 	return (b_search(array, 0, size - 1, value));
-	printf("\n");
 }
