@@ -9,8 +9,7 @@ int main(void)
 {
 	char sentence[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 	long unsigned int i = 0;
-	for(; i < sizeof(sentence); i++) {
+	for(; i < sizeof(sentence) - 1; i++)
 		putchar(sentence[i]);
-	}
 	return (1);
 }
