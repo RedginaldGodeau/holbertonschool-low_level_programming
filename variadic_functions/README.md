@@ -13,7 +13,7 @@ une fonction variadique est une fonction qui peut accepter un nombre variable d'
 ----------------------
 ## 💻 SUIVANT
 
-  🗒 [Singly linked lists](https://github.com/RedginaldGodeau/holbertonschool-low_level_programming/tree/main/singly_linked_lists)
+  - 🗒 [Singly linked lists](https://github.com/RedginaldGodeau/holbertonschool-low_level_programming/tree/main/singly_linked_lists)
   
 ----------------------
 ## 👦 Authors
