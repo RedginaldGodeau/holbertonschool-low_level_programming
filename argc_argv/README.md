@@ -15,7 +15,7 @@ argc est un entier qui représente le nombre d'arguments passés au programme, y
 ----------------------
 ## 💻 SUIVANT
 
-  - 🗒 [Variables if else while](https://github.com/RedginaldGodeau/holbertonschool-low_level_programming/tree/main/variables_if_else_while)
+  - 🗒 [Malloc free](https://github.com/RedginaldGodeau/holbertonschool-low_level_programming/tree/main/malloc_free)
 ----------------------
 ## 👦 Authors
 
