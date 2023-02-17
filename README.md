@@ -1,19 +1,19 @@
 # LOW LEVEL PROGRAMMING
 
 
-## DESCRIPTION
+## 📑 DESCRIPTION
 
 Le langage C est considéré comme un langage de bas niveau car il offre un accès direct à la mémoire et aux ressources du système informatique. Cela signifie que le programmeur doit gérer manuellement la mémoire et les ressources, plutôt que de compter sur un environnement d'exécution pour le faire pour lui. Le langage C est également considéré comme un langage de programmation "proche du matériel" car il est souvent utilisé pour écrire des logiciels système, des pilotes de périphériques et d'autres programmes qui doivent interagir directement avec le matériel.
 
 Les projets d'Holberton School sont des projets de programmation pratiques qui utilisent souvent le langage C pour enseigner aux étudiants les concepts fondamentaux de la programmation de bas niveau.
 
 ----------------------
-## STACKS
+## 🔧 STACKS
 
     LANGAGE C
 
 ----------------------
-## TABLE DES MATIÈRES
+## 💻 TABLE DES MATIÈRES
 
 
   - 🗒 [Hello World](https://github.com/RedginaldGodeau/holbertonschool-low_level_programming/tree/main/hello_world)
@@ -38,3 +38,6 @@ Les projets d'Holberton School sont des projets de programmation pratiques qui u
   - 🗒 [Doubly linked lists](https://github.com/RedginaldGodeau/holbertonschool-low_level_programming/tree/main/doubly_linked_lists)
   - 🗒 [Hash tables](https://github.com/RedginaldGodeau/holbertonschool-low_level_programming/tree/main/)
 ----------------------
+## 👦 Authors
+
+- [@Redginald Godeau](https://github.com/RedginaldGodeau)
